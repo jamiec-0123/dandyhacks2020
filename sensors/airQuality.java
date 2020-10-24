@@ -1,4 +1,6 @@
-public class airQuality{
+package sensors;
+
+public class airQuality {
     private double _airPercentage;
     private String _Location;
 
