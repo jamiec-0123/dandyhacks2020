@@ -39,6 +39,4 @@ public class CardData{
         ;
     }
 
-    //the only way I can see what my debugger doesn't like is if I have a main ignore this
-    public static void main(String[] args){}
 }

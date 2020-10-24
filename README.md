@@ -1,1 +1,1 @@
-# dandyhacks2020
+Currently a commandline utillity for a gui app
