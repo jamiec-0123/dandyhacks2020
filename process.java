@@ -28,7 +28,7 @@ public class process{
         File fileOpener = new File(url);
         Scanner fileReader = new Scanner(fileOpener);
         while (fileReader.hasNextLine()){
-            tempData = fileReader.nextLine();
+            String tempData = fileReader.nextLine();
             String[] valuesInQuotes = StringUtils.substringsBetween(tempData , "\"", "\"");
             output.add(valuesInQuotes[0], valuesInQuotes[1]);
         }
