@@ -1,4 +1,4 @@
-import roomdatas;
+import package.roomdatas.*;
 import java.util.*;  
 
 public class process{
