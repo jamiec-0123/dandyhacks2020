@@ -1,13 +1,6 @@
 
-import java.time.LocalDate;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Scanner;
-
-import cardData;
-import sensors.airQuality;
-import sensors.populationLocation;
-import sensors.trainData;
+import sensors.*;
+import java.util.*;  
 
 public class process{
     List<airQuality> _airQualityData;
@@ -28,8 +21,8 @@ public class process{
     }
     public HashMap<String,String> readData(String url){
         HashMap<String,String> output = new HashMap<String,String>();
-        fileOpener = File(url);
-        fileReader = new Scanner(fileOpener);
+        var fileOpener = File(url);
+        var fileReader = new Scanner(fileOpener);
         while (fileReader.hasNextLine()):
             tempData = fileReader.nextLine();
             String[] valuesInQuotes = StringUtils.substringsBetween(tempData , "\"", "\"");
