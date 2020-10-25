@@ -30,7 +30,7 @@ public class process{
         while (fileReader.hasNextLine()){
             String tempData = fileReader.nextLine();
             String[] valuesInQuotes = StringUtils.substringsBetween(tempData , "\"", "\"");
-            output.add(valuesInQuotes[0], valuesInQuotes[1]);
+            output.put(valuesInQuotes[0], valuesInQuotes[1]);
         }
     return output;
     }
