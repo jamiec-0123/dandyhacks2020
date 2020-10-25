@@ -1,4 +1,4 @@
-package DANDYHACKS2020.sensors;
+package DANDYHACKS2020.CardData;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

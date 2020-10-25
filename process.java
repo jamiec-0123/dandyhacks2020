@@ -1,5 +1,5 @@
 
-import sensors.*;
+import airQuality, cardData, populationLocation, trainData;
 import java.util.*;  
 
 public class process{

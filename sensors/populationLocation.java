@@ -1,4 +1,4 @@
-package DANDYHACKS2020.sensors;
+package DANDYHACKS2020.populationLocation;
 
 public class populationLocation{
     private String _Location;
