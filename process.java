@@ -17,13 +17,13 @@ public class process{
         HashMap<String,String> tempData = new HashMap<String,String>();
         tempData=readData("./sensors/cardDataDump.txt");
         tempData.forEach((IDNum, dateTimeOfUse) -> {
-                cardData tempCardData = new cardData(parseInt(IDNum), LocalDateTime.parse(dateTimeOfUse));
+                cardData tempCardData = new cardData(Integer.parseInt(IDNum), LocalDateTime.parse(dateTimeOfUse));
                 _cardData.add(tempCardData);
         });
 
     }
 
-    public HashMap<String,String> readData(String url){
+    public HashMap<String, String> readData(String url){
         HashMap<String,String> output = new HashMap<String,String>();
         File fileOpener = new File(url);
         Scanner fileReader = new Scanner(fileOpener);
@@ -34,5 +34,6 @@ public class process{
         }
     return output;
     }
+
 
 }
