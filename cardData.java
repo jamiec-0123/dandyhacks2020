@@ -1,30 +1,31 @@
-package DANDYHACKS2020.sensors;
+
 
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+//import java.time.format.DateTimeFormatter;
 
-public class CardData{
+public class cardData{
     private int IDNumber;
     private LocalDateTime lastCheck;
 
     //constructors
-    public CardData(int ID, LocalDateTime lastUse){
+    public cardData(int ID, LocalDateTime lastUse){
         setID(ID);
         setLastCheck(lastUse);
     }
 
-    public CardData(int ID){
+    public cardData(int ID){
         setID(ID);
     }
 
-    public CardData(LocalDateTime lastUse){
+    public cardData(LocalDateTime lastUse){
         setLastCheck(lastUse);
     }
 
-    public CardData(){
+    public cardData(){
         ;
     }
 
+    //class methods
     public int getID(){
         return IDNumber;
     }
