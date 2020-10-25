@@ -2,7 +2,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 import java.util.*;
-
+import java.io.File.*;
 
 public class process{
     List<airQuality> _airQualityData;
@@ -10,7 +10,6 @@ public class process{
     List<populationLocation> _populationLocationData;
     List<cardData> _cardData;
     public process(){
-
     }
     public void generateData(){
         HashMap<String,String> tempData = new HashMap<String,String>();
@@ -23,8 +22,8 @@ public class process{
     }
     public HashMap<String,String> readData(String url){
         HashMap<String,String> output = new HashMap<String,String>();
-        var fileOpener = File(url);
-        var fileReader = new Scanner(fileOpener);
+        File fileOpener = new File(url);
+        Scanner fileReader = new Scanner(fileOpener);
         while (fileReader.hasNextLine()){
             tempData = fileReader.nextLine();
             String[] valuesInQuotes = StringUtils.substringsBetween(tempData , "\"", "\"");
