@@ -35,5 +35,41 @@ public class process{
     return output;
     }
 
+    public HashMap<String, String> getMostPopulatedSection(String location, int currentFloor){
+        HashMap<String, String> data = readData("people");
+        //Set tempData and output to <>//same one as above
 
+        switch(location){
+            case("kitchen"):
+                //Set tempData to data.keyset().removeIf(key -> !key.startsWith(“Kitchenet”))
+                break;
+            case("ceremony"):
+                //Set tempData to data.keyset().removeIf(key -> !key.startsWith(“AgileCeremonySpace”))
+                break;
+            case("work"):
+                //Set tempData to data.keyset().removeIf(key -> !key.startsWith(“AgileWorkSpace”))
+            default:
+                //set tempData to data
+        }
+
+        if (currentFloor >= 1){
+            /*
+            tempData.forEach((workLocation, population) -> {
+            Set TestFloorNum to worklocation.replaceAll(“[^\\d.]”,””)
+                what variable type is this?
+
+            Cast TestFloorNum to int and set it to floorNum
+            */
+
+
+            if(floorNum >= (currentFloor + 1) || floorNum >= (currentFloor - 1)){
+                output.append(workLocation, population);
+            } else {
+                output = tempData;
+            }
+
+            return output;
+        }
+
+    }
 }
