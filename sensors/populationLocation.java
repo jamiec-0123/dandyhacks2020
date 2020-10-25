@@ -3,7 +3,7 @@ package DANDYHACKS2020.sensors;
 public class populationLocation{
     private String _Location;
     private int _population;
-    
+
     public populationLocation(String location, int population){
         setLocation(location);
         setPopulation(population);
@@ -18,7 +18,7 @@ public class populationLocation{
     }
 
     public populationLocation(){
-        
+
     }
 
     public String getLocation(){

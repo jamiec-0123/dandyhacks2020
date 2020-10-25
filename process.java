@@ -1,6 +1,7 @@
-
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import sensors.*;
-import java.util.*;  
+import java.util.*;
 
 public class process{
     List<airQuality> _airQualityData;
@@ -23,10 +24,11 @@ public class process{
         HashMap<String,String> output = new HashMap<String,String>();
         var fileOpener = File(url);
         var fileReader = new Scanner(fileOpener);
-        while (fileReader.hasNextLine()):
+        while (fileReader.hasNextLine()){
             tempData = fileReader.nextLine();
             String[] valuesInQuotes = StringUtils.substringsBetween(tempData , "\"", "\"");
             output.add(valuesInQuotes[0], valuesInQuotes[1]);
+        }
     return output;
     }
 
