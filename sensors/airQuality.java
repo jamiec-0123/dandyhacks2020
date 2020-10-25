@@ -1,4 +1,4 @@
-package DANDYHACKS2020.airQuality;
+package sensors;
 public class airQuality{
     private double _airPercentage;
     private String _Location;

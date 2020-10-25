@@ -1,6 +1,13 @@
 
-import airQuality, cardData, populationLocation, trainData;
-import java.util.*;  
+import java.time.LocalDate;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Scanner;
+
+import cardData;
+import sensors.airQuality;
+import sensors.populationLocation;
+import sensors.trainData;
 
 public class process{
     List<airQuality> _airQualityData;
@@ -8,7 +15,7 @@ public class process{
     List<populationLocation> _populationLocationData;
     List<cardData> _cardData;
     public process(){
-        
+
     }
     public void generateData(){
         HashMap<String,String> tempData = new HashMap<String,String>();
@@ -16,7 +23,7 @@ public class process{
         tempData.forEach((IDNum, dateTimeOfUse) -> {
                 cardData tempCardData = new cardData(parseIn(IDNum), LocalDate.parse(dateTimeOfUse));
                 _cardData.add(tempCardData);
-        }
+        });
 
     }
     public HashMap<String,String> readData(String url){
