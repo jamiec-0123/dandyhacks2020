@@ -1,12 +1,12 @@
-package DANDYHACKS2020;
-import DANDYHACKS2020.sensors.*;
+
+import sensors.*;
 import java.util.*;  
 
 public class process{
-    List<roomdatas.airQuality> _airQualityData;
-    List<roomdatas.trainData> _trainData;
-    List<roomdatas.populationLocation> _populationLocationData;
-    List<roomdatas.cardData> _cardData;
+    List<airQuality> _airQualityData;
+    List<trainData> _trainData;
+    List<populationLocation> _populationLocationData;
+    List<cardData> _cardData;
     public process(){
         
     }
@@ -14,8 +14,8 @@ public class process{
         HashMap<String,String> tempData = new HashMap<String,String>();
         tempData=readData("./sensors/cardDataDump.txt");
         tempData.forEach((IDNum, dateTimeOfUse) -> {
-                roomdatas.cardData tempCardData = new roomdatas.cardData(parseIn(IDNum), LocalDate.parse(dateTimeOfUse));
-                cardData.add(tempCardData);
+                cardData tempCardData = new cardData(parseIn(IDNum), LocalDate.parse(dateTimeOfUse));
+                _cardData.add(tempCardData);
         }
 
     }
