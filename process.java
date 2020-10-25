@@ -2,15 +2,17 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 import java.util.*;
-import java.io.File.*;
+import java.io.File;
 
 public class process{
     List<airQuality> _airQualityData;
     List<trainData> _trainData;
     List<populationLocation> _populationLocationData;
     List<cardData> _cardData;
+
     public process(){
     }
+
     public void generateData(){
         HashMap<String,String> tempData = new HashMap<String,String>();
         tempData=readData("./sensors/cardDataDump.txt");
@@ -20,6 +22,7 @@ public class process{
         });
 
     }
+
     public HashMap<String,String> readData(String url){
         HashMap<String,String> output = new HashMap<String,String>();
         File fileOpener = new File(url);
