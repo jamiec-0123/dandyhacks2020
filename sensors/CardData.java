@@ -1,25 +1,10 @@
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+package roomdatas;
 
 public class CardData{
     private int IDNumber;
     private LocalDateTime lastCheck;
-
-    public int getID(){
-        return IDNumber;
-    }
-
-    public void setID(int inputID){
-        this.IDNumber = inputID;
-    }
-
-    public LocalDateTime getLastCheck(){
-        return lastCheck;
-    }
-
-    public void setLastCheck(LocalDateTime lastCheck){
-        this.lastCheck = lastCheck;
-    }
 
     //constructors
     public CardData(int ID, LocalDateTime lastUse){
@@ -39,4 +24,19 @@ public class CardData{
         ;
     }
 
+    public int getID(){
+        return IDNumber;
+    }
+
+    public void setID(int inputID){
+        this.IDNumber = inputID;
+    }
+
+    public LocalDateTime getLastCheck(){
+        return lastCheck;
+    }
+
+    public void setLastCheck(LocalDateTime lastCheck){
+        this.lastCheck = lastCheck;
+    }
 }
