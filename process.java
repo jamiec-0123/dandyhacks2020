@@ -16,13 +16,13 @@ public class process{
         tempData.forEach((IDNum, dateTimeOfUse) -> {
                 cardData tempCardData = new cardData(parseIn(IDNum), LocalDate.parse(dateTimeOfUse));
                 _cardData.add(tempCardData);
-        }
+        });
 
     }
     public HashMap<String,String> readData(String url){
         HashMap<String,String> output = new HashMap<String,String>();
-        fileOpener = File(url);
-        fileReader = new Scanner(fileOpener);
+        var fileOpener = File(url);
+        var fileReader = new Scanner(fileOpener);
         while (fileReader.hasNextLine()):
             tempData = fileReader.nextLine();
             String[] valuesInQuotes = StringUtils.substringsBetween(tempData , "\"", "\"");

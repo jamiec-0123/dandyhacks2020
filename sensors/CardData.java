@@ -1,8 +1,7 @@
-package DANDYHACKS2020.CardData;
+package DANDYHACKS2020.sensors;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-package roomdatas;
 
 public class CardData{
     private int IDNumber;

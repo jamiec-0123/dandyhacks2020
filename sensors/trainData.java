@@ -6,7 +6,7 @@ public class trainData{
     private String _route;
     private LocalDateTime _arrivalTime;
 
-    public getRoute(){
+    public String getRoute(){
         return this._route;
     }
 
@@ -14,7 +14,7 @@ public class trainData{
         this._route = route;
     }
 
-    public getArrivalTime(){
+    public LocalDateTime getArrivalTime(){
         return this._arrivalTime;
     }
 
