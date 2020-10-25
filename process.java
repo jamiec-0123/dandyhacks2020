@@ -14,7 +14,7 @@ public class process{
         HashMap<String,String> tempData = new HashMap<String,String>();
         tempData=readData("./sensors/cardDataDump.txt");
         tempData.forEach((IDNum, dateTimeOfUse) -> {
-                roomdatas.cardData tempCardData = new roomdatas.cardData(int(IDNum), tempCardData(dateTimeOfUse));
+                roomdatas.cardData tempCardData = new roomdatas.cardData(parseIn(IDNum), LocalDate.parse(dateTimeOfUse));
                 cardData.add(tempCardData);
         }
 
