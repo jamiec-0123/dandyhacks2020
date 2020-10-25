@@ -1,4 +1,5 @@
 import roomdatas;
+import java.util.*;  
 
 public class process{
     List<roomdatas.airQuality> _airQualityData;
@@ -8,4 +9,24 @@ public class process{
     public process(){
         
     }
+    public void generateData(){
+        HashMap<String,String> tempData = new HashMap<String,String>();
+        tempData=readData("./sensors/cardDataDump.txt");
+        tempData.forEach((IDNum, dateTimeOfUse) -> {
+                roomdatas.cardData tempCardData = new roomdatas.cardData(int(IDNum), tempCardData(dateTimeOfUse));
+                cardData.add(tempCardData);
+        }
+
+    }
+    public HashMap<String,String> readData(String url){
+        HashMap<String,String> output = new HashMap<String,String>();
+        fileOpener = File(url);
+        fileReader = new Scanner(fileOpener);
+        while (fileReader.hasNextLine()):
+            tempData = fileReader.nextLine();
+            String[] valuesInQuotes = StringUtils.substringsBetween(tempData , "\"", "\"");
+            output.add(valuesInQuotes[0], valuesInQuotes[1]);
+    return output;
+    }
+
 }
