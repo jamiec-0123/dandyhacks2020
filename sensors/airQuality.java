@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 package roomdatas;
 public class airQuality{
+=======
+package sensors;
+
+public class airQuality {
+>>>>>>> cfad9ea8f9bd4bbe4da8c20dd8d103d019281726
     private double _airPercentage;
     private String _Location;
 
