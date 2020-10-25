@@ -72,4 +72,37 @@ public class process{
         }
 
     }
+
+    public HashMap<String, String> getMostPopulatedSection(int currentFloor){
+        HashMap<String, String> data = readData("people");
+        //Set tempData and output to <>//same one as above
+
+        if (currentFloor >= 1){
+            /*
+            tempData.forEach((workLocation, population) -> {
+            Set TestFloorNum to worklocation.replaceAll(“[^\\d.]”,””)
+                what variable type is this?
+
+            Cast TestFloorNum to int and set it to floorNum
+            */
+
+
+            if(floorNum >= (currentFloor + 1) || floorNum >= (currentFloor - 1)){
+                output.append(workLocation, population);
+            } else {
+                output = tempData;
+            }
+
+            return output;
+        }
+    }
+
+    public String[] checkWorkTime(LocalDateTime currentTime, int alertReminderTime){
+
+    }
+
+    public boolean checkO2(int floorNum, int o2level){
+
+    }
+
 }
